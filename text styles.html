@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Transformer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            width: 420px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 8px;
+            resize: none;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .output {
+            margin-top: 15px;
+        }
+
+        .output textarea {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Text Transformer</h2>
+
+    <label>Enter Text:</label>
+    <textarea id="inputText" placeholder="Type your text here..."></textarea>
+
+    <label>Select Option:</label>
+    <select id="option">
+        <option value="upper">CAPITALIZE ALL</option>
+        <option value="lower">make all lowercase</option>
+        <option value="sentence">Capitalize after .</option>
+        <option value="mocking">Mocking text</option>
+    </select>
+
+    <button onclick="transformText()">Transform</button>
+
+    <div class="output">
+        <label>Output:</label>
+        <textarea id="outputText" readonly></textarea>
+    </div>
+</div>
+
+<script>
+    function transformText() {
+        let text = document.getElementById("inputText").value;
+        let option = document.getElementById("option").value;
+        let result = "";
+
+        if (option === "upper") {
+            result = text.toUpperCase();
+        }
+
+        else if (option === "lower") {
+            result = text.toLowerCase();
+        }
+
+        else if (option === "sentence") {
+            result = text
+                .toLowerCase()
+                .replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
+        }
+
+        else if (option === "mocking") {
+            result = text
+                .split("")
+                .map(char =>
+                    Math.random() > 0.5 ? char.toUpperCase() : char.toLowerCase()
+                )
+                .join("");
+        }
+
+        document.getElementById("outputText").value = result;
+    }
+</script>
+
+</body>
+</html>

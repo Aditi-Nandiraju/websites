@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditi Nandiraju Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0077cc, #00c4ff);
+      color: white;
+      text-align: center;
+      padding: 60px 20px 40px;
+      border-radius: 0 0 20px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 32px;
+    }
+
+    /* Profile Image - moved to top-right corner */
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-weight: bold;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #0077cc;
+      border-bottom: 2px solid #00c4ff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .project {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .project a {
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    .skill {
+      display: inline-block;
+      background: #0077cc;
+      color: white;
+      padding: 8px 20px;
+      margin: 5px;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+
+    .skill:hover {
+      background: #00c4ff;
+    }
+
+    .certificate {
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-left: 5px solid #0077cc;
+      border-radius: 10px;
+    }
+
+    .certificate a {
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    .certificate a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      background: #0077cc;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      margin-top: 50px;
+    }
+
+    @media(max-width: 600px) {
+      nav a { display: block; margin: 5px 0; }
+      .profile-pic {
+        width: 90px;
+        height: 90px;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+
+  <!-- Profile Image in Top-Right Corner -->
+  <img src="C:\Users\Aditi\Downloads\WhatsApp Image 2025-11-25 at 9.24.13 AM.jpeg"
+       class="profile-pic" alt="Profile">
+
+  <h1>Aditi Nandiraju</h1>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+  </nav>
+</header>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <strong><a href="https://github.com/Aditi-Nandiraju/projects/blob/main/netflix_movie_recommendation_system.ipynb" target="_blank">Netflix Movie Recommendation System</a></strong>
+    <p>An AI/ML-based system that recommends movies based on user preferences, viewing history, and movie similarities.</p>
+  </div>
+  <div class="project">
+    <strong><a href="https://github.com/Aditi-Nandiraju/projects/blob/main/linear_regression(housing).ipynb" target="_blank">Linear Regression Housing Prices</a></strong>
+    <p>Predicts housing prices using Linear Regression based on features like area, number of bedrooms, and location.</p>
+  </div>
+  <div class="project">
+    <strong><a href="https://github.com/Aditi-Nandiraju/projects/blob/main/FeatureEngineeringEx_iris_dataset.ipynb" target="_blank">Logistic Regression Iris Classification</a></strong>
+    <p>Classifies flowers in the Iris dataset into three species using Logistic Regression.</p>
+  </div>
+  <div class="project">
+    <strong><a href="https://github.com/Aditi-Nandiraju/projects/blob/main/IMAGE%20PROCESSING%20USING%20MATRICES%20MAIN.py" target="_blank">Image Processing Using Matrices</a></strong>
+    <p>Performs image operations like brightness adjustment, blurring, and edge detection using matrices.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill">Python</div>
+  <div class="skill">SQL</div>
+  <div class="skill">DSA</div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificate">
+    <strong><a href="https://coursera.org/share/f5356c3d74f57311f6f675c775189e89" target="_blank">Database Management Systems</a></strong>
+  </div>
+  <div class="certificate">
+    <strong><a href="https://www.udemy.com/certificate/UC-81fba4d8-7c82-474d-bf60-273268cdf381/" target="_blank">IT Fundamentals</a></strong>
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Aditi Nandiraju
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
